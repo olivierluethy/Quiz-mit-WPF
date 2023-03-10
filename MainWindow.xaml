@@ -1,0 +1,209 @@
+﻿<Window x:Class="Quiz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quiz"
+        mc:Ignorable="d"
+        Title="Quiz" Height="450" Width="800" Loaded="Window_Loaded">
+  <Grid>
+    <TabControl Name="tcSample">
+      <TabItem Header="Introduction" x:Name="tabIntroduction">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+          </Grid.RowDefinitions>
+
+          <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="10*"/>
+              <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+              <Image Source="/Quiz;component/Images/google-quiz.jpg" Margin="0, 10, 0, 0"/>
+            </Grid>
+
+            <Grid Grid.Column="1">
+              <Label Content="Das Quiz der Schätzungen" FontSize="20" HorizontalAlignment="Center" Margin="76,10,64,224" Width="253"/>
+              <Label Content="In diesem Quiz werden 5 Fragen gestellt die man schätzen muss" Margin="10,55,0,184" RenderTransformOrigin="0.392,0.464"/>
+            </Grid>
+          </Grid>
+
+          <Grid Grid.Row="1">
+            <Button Background="LightGreen" x:Name="btnStart" Click="btnStart_Click" FontWeight="Bold" Margin="287,21,285,30">Start</Button>
+          </Grid>
+        </Grid>
+      </TabItem>
+
+      <TabItem Header="Question 1" x:Name="tabQuestion1">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+
+          <Grid Grid.Row="0">
+            <Label x:Name="txtQuiz1" Content="Quizfrage 1" FontSize="20" HorizontalAlignment="Center" Margin="337,0,334,53" Width="115"/>
+            <Label x:Name="txtQuestion1" Content="Wie viele Weihnachtsbäume werden in Deutschland pro Jahr verkauft?" Margin="202,50,144,19"/>
+            <Label x:Name="txtRichtig1" Content="Richtig!" Margin="292,125,259,-128" FontSize="50" Visibility="Hidden"/>
+            <Label x:Name="txtFalsch1" Content="Falsch!" Margin="292,125,259,-128" FontSize="50" Visibility="Hidden"/>
+          </Grid>
+
+          <Grid Grid.Row="1">
+            <Button x:Name="btn11" Click="btn11_Click" Content="Etwa 30 Millionen." Margin="292,18,284,170"/>
+            <Button x:Name="btn12" Click="btn12_Click" Content="Etwa 25 Millionen." Margin="292,68,284,120"/>
+            <Button x:Name="btn13" Click="btn13_Click" Content="Etwa 20 Millionen." Margin="292,118,284,70"/>
+            <Button x:Name="btn14" Click="btn14_Click" Content="Etwa 15 Millionen." Margin="292,168,284,20"/>
+          </Grid>
+
+          <Grid Grid.Row="2">
+            <Button Content="Next &gt;&gt;" x:Name="btnNext1" Click="btnNext1_Click" Margin="317,10,305,16" Background="LightGreen" Visibility="Hidden"/>
+          </Grid>
+        </Grid>
+      </TabItem>
+
+      <TabItem Header="Question 2" x:Name="tabQuestion2">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+
+          <Grid Grid.Row="0">
+            <Label x:Name="txtQuiz2" Content="Quizfrage 2" FontSize="20" HorizontalAlignment="Center" Margin="337,0,334,53" Width="115"/>
+            <Label x:Name="txtQuestion2" Content="Wie viele Liter Bier werden in Deutschland pro Kopf jährlich getrunken?" Margin="202,50,144,19"/>
+            <Label x:Name="txtRichtig2" Content="Richtig!" Margin="292,125,259,-128" FontSize="50" Visibility="Hidden"/>
+            <Label x:Name="txtFalsch2" Content="Falsch!" Margin="292,125,259,-128" FontSize="50" Visibility="Hidden"/>
+          </Grid>
+
+          <Grid Grid.Row="1">
+            <Button x:Name="btn21" Click="btn21_Click" Content="180 Liter Bier." Margin="292,18,284,170"/>
+            <Button x:Name="btn22" Click="btn22_Click" Content="120 Liter Bier." Margin="292,68,284,120"/>
+            <Button x:Name="btn23" Click="btn23_Click" Content="100 Liter Bier." Margin="292,118,284,70"/>
+            <Button x:Name="btn24" Click="btn24_Click" Content="101 Liter Bier." Margin="292,168,284,20"/>
+          </Grid>
+
+          <Grid Grid.Row="2">
+            <Button Content="Next &gt;&gt;" x:Name="btnNext2" Click="btnNext2_Click" Margin="317,10,305,16" Background="LightGreen" Visibility="Hidden"/>
+          </Grid>
+        </Grid>
+      </TabItem>
+
+      <TabItem Header="Question 3" x:Name="tabQuestion3">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+
+          <Grid Grid.Row="0">
+            <Label x:Name="txtQuiz3" Content="Quizfrage 3" FontSize="20" HorizontalAlignment="Center" Margin="337,0,334,53" Width="115"/>
+            <Label x:Name="txtQuestion3" Content="Wie lang ist der Begattungsapparat der 15 cm langen Bananenschnecke?" Margin="202,50,144,19"/>
+            <Label x:Name="txtRichtig3" Content="Richtig!" Margin="292,125,259,-128" FontSize="50" Visibility="Hidden"/>
+            <Label x:Name="txtFalsch3" Content="Falsch!" Margin="292,125,259,-128" FontSize="50" Visibility="Hidden"/>
+          </Grid>
+
+          <Grid Grid.Row="1">
+            <Button x:Name="btn31" Click="btn31_Click" Content="Circa 80 cm, das entspricht 550 Prozent der Körpergröße." Margin="292,18,284,170"/>
+            <Button x:Name="btn32" Click="btn32_Click" Content="Circa 100 cm, das entspricht 600 Prozent der Körpergröße." Margin="292,68,284,120"/>
+            <Button x:Name="btn33" Click="btn33_Click" Content="Circa 55 cm, das entspricht 520,2 Prozent der Körpergröße." Margin="292,118,284,70"/>
+            <Button x:Name="btn34" Click="btn34_Click" Content="Circa 60 cm, das entspricht 535 Prozent der Körpergröße." Margin="292,168,284,20"/>
+          </Grid>
+
+          <Grid Grid.Row="2">
+            <Button Content="Next &gt;&gt;" x:Name="btnNext3" Click="btnNext3_Click" Margin="317,10,305,16" Background="LightGreen" Visibility="Hidden"/>
+          </Grid>
+        </Grid>
+      </TabItem>
+
+      <TabItem Header="Question 4" x:Name="tabQuestion4">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+
+          <Grid Grid.Row="0">
+            <Label x:Name="txtQuiz4" Content="Quizfrage 4" FontSize="20" HorizontalAlignment="Center" Margin="337,0,334,53" Width="115"/>
+            <Label x:Name="txtQuestion4" Content="Wie viele Buchstaben hat das hawaiianische Alphabet?" Margin="202,50,144,19"/>
+            <Label x:Name="txtRichtig4" Content="Richtig!" Margin="292,125,259,-128" FontSize="50" Visibility="Hidden"/>
+            <Label x:Name="txtFalsch4" Content="Falsch!" Margin="292,125,259,-128" FontSize="50" Visibility="Hidden"/>
+          </Grid>
+
+          <Grid Grid.Row="1">
+            <Button x:Name="btn41" Click="btn41_Click" Content="14" Margin="292,18,284,170"/>
+            <Button x:Name="btn42" Click="btn42_Click" Content="19" Margin="292,68,284,120"/>
+            <Button x:Name="btn43" Click="btn43_Click" Content="20" Margin="292,118,284,70"/>
+            <Button x:Name="btn44" Click="btn44_Click" Content="12" Margin="292,168,284,20"/>
+          </Grid>
+
+          <Grid Grid.Row="2">
+            <Button Content="Next &gt;&gt;" x:Name="btnNext4" Click="btnNext4_Click" Margin="317,10,305,16" Background="LightGreen" Visibility="Hidden"/>
+          </Grid>
+        </Grid>
+      </TabItem>
+
+      <TabItem Header="Question 5" x:Name="tabQuestion5">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+          </Grid.RowDefinitions>
+
+          <Grid Grid.Row="0">
+            <Label x:Name="txtQuiz5" Content="Quizfrage 5" FontSize="20" HorizontalAlignment="Center" Margin="337,0,334,53" Width="115"/>
+            <Label x:Name="txtQuestion5" Content="Wie viele Einkerbungen hat ein Golfball?" Margin="202,50,144,19"/>
+            <Label x:Name="txtRichtig5" Content="Richtig!" Margin="292,125,259,-128" FontSize="50" Visibility="Hidden"/>
+            <Label x:Name="txtFalsch5" Content="Falsch!" Margin="292,125,259,-128" FontSize="50" Visibility="Hidden"/>
+          </Grid>
+
+          <Grid Grid.Row="1">
+            <Button x:Name="btn51" Click="btn51_Click" Content="336" Margin="292,18,284,170"/>
+            <Button x:Name="btn52" Click="btn52_Click" Content="300" Margin="292,68,284,120"/>
+            <Button x:Name="btn53" Click="btn53_Click" Content="400" Margin="292,118,284,70"/>
+            <Button x:Name="btn54" Click="btn54_Click" Content="335" Margin="292,168,284,20"/>
+          </Grid>
+
+          <Grid Grid.Row="2">
+            <Button Content="Next &gt;&gt;" x:Name="btnNext5" Click="btnNext5_Click" Margin="317,10,305,16" Background="LightGreen" Visibility="Hidden"/>
+          </Grid>
+        </Grid>
+      </TabItem>
+
+      <TabItem Header="Finish" x:Name="tabFinish">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+          </Grid.RowDefinitions>
+
+          <Grid Grid.Row="0">
+            <Label Content="" x:Name="txtPunkte" FontSize="35" Margin="67,33,-35,20" HorizontalAlignment="Center" VerticalAlignment="Center" Width="754" Height="77"/>
+          </Grid>
+
+          <Grid Grid.Row="1">
+            <Label Content="" x:Name="txtProzent" FontSize="35" Margin="292,55,254,-27" HorizontalAlignment="Center" VerticalAlignment="Center" Width="240" Height="59"/>
+          </Grid>
+
+          <Grid Grid.Row="2">
+            <Label Content="" x:Name="txtZeit" FontSize="35" Margin="152,132,144,-79" HorizontalAlignment="Center" VerticalAlignment="Center" Width="490" Height="59"/>
+          </Grid>
+
+          <Grid Grid.Row="3">
+            <Label Content="0" Name="lblTime" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Label FontSize="20" Content="Du hast für das Quiz" HorizontalAlignment="Left" Margin="183,25,0,0" VerticalAlignment="Top"/>
+            <Label FontSize="20" Content="Sekunden gebraucht!" HorizontalAlignment="Left" Margin="397,25,0,0" VerticalAlignment="Top"/>
+          </Grid>
+        </Grid>
+      </TabItem>
+    </TabControl>
+  </Grid>
+</Window>
